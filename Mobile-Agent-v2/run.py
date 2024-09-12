@@ -242,6 +242,7 @@ def get_perception_infos(adb_path, screenshot_file):
     for i in range(len(perception_infos)):
         perception_infos[i]['coordinates'] = [int((perception_infos[i]['coordinates'][0]+perception_infos[i]['coordinates'][2])/2), int((perception_infos[i]['coordinates'][1]+perception_infos[i]['coordinates'][3])/2)]
         
+    # 文字/图标描述信息以及中心坐标，屏幕宽高
     return perception_infos, width, height
 
 ### Load caption model ###
@@ -421,7 +422,10 @@ while True:
         print(status)
         print(output_reflect)
         print('#' * len(status))
-    
+
+        # A：操作动作的结果符合我对操作思路的预期操作想法
+        # B：操作动作导致页面错误，我需要返回上一页
+        # C：操作动作未产生任何变化
         if 'A' in reflect:
             thought_history.append(thought)
             summary_history.append(summary)
