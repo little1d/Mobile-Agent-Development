@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 import time
 import copy
 import torch
@@ -23,15 +26,15 @@ import concurrent
 
 ####################################### Edit your Setting #########################################
 # Your ADB path
-adb_path = "adb.exe"
+adb_path = os.getenv("ADB_PATH")
 
 # Your instruction
 # Your GPT-4o API URL
 instruction = "帮我看这个直播间的弹幕，并将其全部写入数据库。"
-API_url = "https://api.chatfire.cn/v1/chat/completions"
+API_url = os.getenv("API_URL")
 
 # Your GPT-4o API Token
-token = "sk-yLLTQ649hsgjJNYe39BaE9Ef029a4e1f92D1D5Dd9758F6Fc"
+token = os.getenv("API_TOKEN")
 
 # Choose between "api" and "local". api: use the qwen api. local: use the local qwen checkpoint
 caption_call_method = "api"
@@ -40,7 +43,7 @@ caption_call_method = "api"
 caption_model = "qwen-vl-max"
 
 # If you choose the api caption call method, input your Qwen api here
-qwen_api = "sk-f6201a828a2d481eb0594522b36917ea"
+qwen_api = os.getenv("QWEN_API")
 
 # You can add operational knowledge to help Agent operate more accurately.
 # add_info = "If you want to tap an icon of an app, use the action \"Open app\". If you want to exit an app, use the action \"Home\""

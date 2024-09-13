@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <h1 class="title">会议小助手</h1>
-    <div class="buttons">
-      <Button text="自动语音识别" @click="router.push('/ASR')" />
-      <Button text="弹幕记录" @click="router.push('/danmu-record')" />
-      <Button text="会议纪要生成" @click="router.push('/meeting-outline-generation')" />
+    <h3>supported by EVA </h3>
+    <div class="button-box">
+      <n-button @click="router.push('/ASR')" >自动语音识别</n-button>
+      <n-button @click="router.push('/danmu-record')" >弹幕记录</n-button>
+      <n-button @click="router.push('/meeting-outline-generation')" >会议纪要生成</n-button>
     </div>
-    <n-button>123</n-button>
   </div>
 </template>
 
@@ -29,9 +29,4 @@ const router = useRouter();
   margin-bottom: 20px;
 }
 
-button{
-  width: 20px;
-  height: 40px;
-  gap: 20px;
-}
 </style>
