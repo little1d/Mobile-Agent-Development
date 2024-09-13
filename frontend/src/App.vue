@@ -3,9 +3,7 @@
 </template>
 
 <script setup>
-export default {
-  name: 'App'
-};
+
 </script>
 
 <style scoped>

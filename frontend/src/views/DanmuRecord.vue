@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'DanmuRecord'
-};
+<script setup>
+
 </script>
