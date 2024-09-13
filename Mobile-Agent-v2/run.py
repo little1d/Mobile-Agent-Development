@@ -23,7 +23,7 @@ import concurrent
 
 ####################################### Edit your Setting #########################################
 # Your ADB path
-adb_path = "adb.exe"
+adb_path = "D:/Application/leidian/LDPlayer9/adb.exe"
 
 # Your instruction
 # Your GPT-4o API URL
